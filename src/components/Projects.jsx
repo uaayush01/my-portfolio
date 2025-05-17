@@ -5,6 +5,7 @@ import gameImg from "../assets/gamepic.webp"
 import ecoImg from "../assets/ecopro.avif"
 import diceImg from "../assets/diceimg.avif"
 import weatherImg from "../assets/weatherimg.avif"
+import {motion} from 'framer-motion'
 
 
 const projects = [
@@ -52,9 +53,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section
+    <motion.section
       id="projects"
       className="py-20 px-6 max-w-7xl mx-auto text-center"
+       initial={{opacity:0.2,y:100}} transition={{duration:1}} whileInView={{opacity:1,y:0}} viewport={{once:true}}
     >
       <h2 className="text-3xl font-bold mb-12 text-blue-600 dark:text-blue-400">
         Projects
@@ -108,7 +110,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

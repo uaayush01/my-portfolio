@@ -4,6 +4,7 @@ import { SiTailwindcss, SiExpress, SiNetlify, SiVercel,  } from "react-icons/si"
 import { VscVscode } from "react-icons/vsc";
 import { GiSkills } from "react-icons/gi";
 import { LuBrain } from "react-icons/lu";
+import {motion} from 'framer-motion'
 
 
 const Skills = () => {
@@ -53,9 +54,10 @@ const Skills = () => {
   ];
 
   return (
-    <section
+    <motion.section
       id="skills"
       className="min-h-screen px-6 py-20 max-w-6xl mx-auto text-center"
+       initial={{opacity:0.2,y:100}} transition={{duration:1}} whileInView={{opacity:1,y:0}} viewport={{once:true}}
     >
       <h2 className="text-3xl font-bold mb-12 text-blue-600 dark:text-blue-400">
         Skills
@@ -81,7 +83,7 @@ const Skills = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

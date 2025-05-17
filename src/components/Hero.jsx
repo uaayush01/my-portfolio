@@ -1,4 +1,5 @@
 // src/components/Hero.jsx
+
 const Hero = () => {
   return (
     <section

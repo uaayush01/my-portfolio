@@ -1,9 +1,10 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import {motion} from 'framer-motion'
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-6 max-w-4xl mx-auto text-center">
+    <motion.section id="contact" className="py-20 px-6 max-w-4xl mx-auto text-center">
       <h2 className="text-3xl font-bold mb-6 text-blue-600 dark:text-blue-400">
         Contact Me
       </h2>
@@ -11,10 +12,10 @@ const Contact = () => {
         I'm open to work, collaboration, or just a friendly hello. Drop a message!
       </p>
 
-      <form
+      <motion.form
   action="https://formspree.io/f/mjkwjknp"
   method="POST"
-  className="space-y-6 text-left"
+  className="space-y-6 text-left"    initial={{opacity:0.2,y:100}} transition={{duration:1}} whileInView={{opacity:1,y:0}} viewport={{once:true}}
 >
   <input
     type="text"
@@ -43,8 +44,8 @@ const Contact = () => {
   >
     Send Message
   </button>
-</form>
-      <div className="mt-12 flex justify-center gap-8 text-2xl text-blue-600 dark:text-blue-400">
+</motion.form>
+      <motion.div className="mt-12 flex justify-center gap-8 text-2xl text-blue-600 dark:text-blue-400"  initial={{opacity:0.2,y:100}} transition={{duration:1}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
         <a
           href="mailto:uaayush08@gmail.com"
           target="_blank"
@@ -77,8 +78,8 @@ const Contact = () => {
         >
           <SiLeetcode />
         </a>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

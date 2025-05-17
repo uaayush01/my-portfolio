@@ -1,5 +1,6 @@
 // src/components/About.jsx
 import devImage from "../assets/pic-1.svg";
+import {motion} from 'framer-motion'
 
 const About = () => {
   return (
@@ -26,13 +27,13 @@ const About = () => {
     </div>
 
     {/* Image */}
-    <div className="md:w-1/2 flex justify-center">
+    <motion.div className="md:w-1/2 flex justify-center"  initial={{opacity:0.2,y:100}} transition={{duration:1}} whileInView={{opacity:1,y:0}} viewport={{once:true}}>
       <img
         src={devImage}
         alt="Web developer"
         className="w-full max-w-sm rounded-xl"
       />
-    </div>
+    </motion.div>
   </div>
 </section>
 
