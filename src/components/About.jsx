@@ -18,12 +18,8 @@ const About = () => {
     {/* Text */}
     <div className="md:w-1/2">
       <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-        Hello! I'm a Web developer who loves building modern, performant
-        web applications. With a solid background in both frontend and backend
-        technologies, I enjoy crafting user-friendly interfaces and building
-        robust APIs. I’m also interested in problem solving, databases, and
-        scalable deployment.
-      </p>
+        Hi there! I'm Aayush, a energetic and committed tech enthusiast passionate about creating innovative solutions for real-world problems. I am always excited to learn new technologies and tools and give my best to everything i do. Welcome to my online portfolio where you'll find a showcase of my projects, experiences, and the skills I've developed so far. Let's connect and collaborate together.
+                </p>
     </div>
 
     {/* Image */}
